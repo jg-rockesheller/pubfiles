@@ -4,6 +4,8 @@ Using [this book](https://learnyouahaskell.com/chapters) to learn Haskell.
 
 Bookmark: [3. Types and Typeclasses](http://learnyouahaskell.com/types-and-typeclasses)
 
+---
+
 ## 2024.03.01 Notes
 
 * Just finished chapter 2
@@ -12,6 +14,17 @@ Bookmark: [3. Types and Typeclasses](http://learnyouahaskell.com/types-and-typec
   * List comprehension makes sense when I think of them like they are loops
 * Been mainly using the language through the REPL, just loading in files rather than compiling them
   * Maybe later in the book we will cover compilation, but if not, I'll figure it out
-* I think at the end of the book I want to try out an Advent of Code season in Haskell, but I'll see.
+* I think at the end of the book I want to try out an Advent of Code season in Haskell, but I'll see
 
+---
+
+## 2024.03.02 Notes
+
+### After Chapter 3
+
+* Just finished chpater 3, I think I might need to reread it again
+* It draws a lot of comparison to generics and type interfaces, which I don't really know much about
+  * I do think I understand the concept of a typeclass though, so if I ever have to deal with them in other programming langauges, I can draw parallels to Haskell
+* I love the fact that Haskell is statically typed, and it makes sense with how everything is an expression/function and how mutability works in the language
+* Upon reread things are clearer
 
