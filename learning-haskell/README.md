@@ -2,7 +2,7 @@
 
 Using [this book](https://learnyouahaskell.com/chapters) to learn Haskell.
 
-Bookmark: [5. Recursion](https://learnyouahaskell.com/recursion)
+Bookmark: [6. Higher Order Functions](https://learnyouahaskell.com/higher-order-functions)
 
 ---
 
@@ -31,15 +31,29 @@ Bookmark: [5. Recursion](https://learnyouahaskell.com/recursion)
 
 ## 2024.03.03 Notes
 
+### Chapter 4
+
 * Just finished chapter 4
 * Definitely need to reread it to understand everything
 * These all feel like variations of `case` or `if - else if - else` in `C`, except more powerful
-* I think pattern matching is only ever really useful lists, I would most likely use guards in other scenarios
+* ~~I think pattern matching is only ever really useful lists, I would most likely use guards in other scenarios~~
 * Reminds me of how powerful expressions are in Haskell
 * I've seen `let` and `in` before using Nix
 
+<!-- bruh how do tables work in gfm??? -->
 |                  |                                       |
 | ---------------- | ------------------------------------- |
 | guards           | match against value                   |
 | pattern matching | match against value **and structure** |
+<!-- weird workaround for me wanting to just have a table with no heading -->
+<!-- apparently: https://stackoverflow.com/questions/17536216/create-a-table-without-a-header-in-markdown -->
+<!-- I wish I was better at HTML, maybe I'll learn web dev -->
 
+### Chapter 5
+
+* Just finished chapter 5
+* I feel like I got the concept first try, especially because I'm somewhat accustomed to recursion in other languages, especially Python
+* Pattern matching makes recursion feel very clean and concise
+* It tends to be clear what edge cases are
+* This chapter was very fun because I tried to implement the functions based off their descriptions without looking at how the book does it first
+* I think it will take some time getting accustomed to no loops, but recursion feels really fun
