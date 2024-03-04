@@ -27,14 +27,17 @@ Bookmark: [5. Recursion](https://learnyouahaskell.com/recursion)
 * Upon reread things are clearer
 * Type variables are kinda like working with types with the PreProc.
 
+---
+
 ## 2024.03.03 Notes
 
 * Just finished chapter 4
 * Definitely need to reread it to understand everything
 * These all feel like variations of `case` or `if - else if - else` in `C`, except more powerful
 * I think pattern matching is only ever really useful lists, I would most likely use guards in other scenarios
-  * | guards           | match against value                   |
-    | pattern matching | match against value **and structure** |
 * Reminds me of how powerful expressions are in Haskell
 * I've seen `let` and `in` before using Nix
+
+| guards           | match against value                   |
+| pattern matching | match against value **and structure** |
 
