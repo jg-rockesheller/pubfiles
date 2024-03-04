@@ -39,5 +39,6 @@ Bookmark: [5. Recursion](https://learnyouahaskell.com/recursion)
 * I've seen `let` and `in` before using Nix
 
 | guards           | match against value                   |
+| ---------------- | ------------------------------------- |
 | pattern matching | match against value **and structure** |
 
