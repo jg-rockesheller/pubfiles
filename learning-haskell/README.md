@@ -2,7 +2,7 @@
 
 Using [this book](https://learnyouahaskell.com/chapters) to learn Haskell.
 
-Bookmark: [6. Higher Order Functions](https://learnyouahaskell.com/higher-order-functions)
+Bookmark: [7. Modules](https://learnyouahaskell.github.io/modules.html)
 
 ---
 
@@ -57,3 +57,17 @@ Bookmark: [6. Higher Order Functions](https://learnyouahaskell.com/higher-order-
 * It tends to be clear what edge cases are
 * This chapter was very fun because I tried to implement the functions based off their descriptions without looking at how the book does it first
 * I think it will take some time getting accustomed to no loops, but recursion feels really fun
+
+---
+
+## 2024.03.05
+
+* Just finished chapter 5
+* Now I'm halfway done with the book!
+* This chapter had a LOT of content, so I will probably reread it
+* Most of the concepts make sense
+* I am most confused by folding, but I think if I review it again I will understand it
+* It feels like I am done with most of the core language features (not including ecosystem stuff or common practices)
+  * I feel like I learned the atomic parts of the language
+  * I felt like I had to learn Haskell from the ground up unlike other languages because of how different I have to think when doing functional stuff
+* Many features overlap, but have certain best use cases, so I will need to understand those
