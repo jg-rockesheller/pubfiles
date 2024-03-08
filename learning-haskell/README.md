@@ -1,6 +1,6 @@
 # Learning Haskell
 
-Using [this book](https://learnyouahaskell.com/chapters) to learn Haskell.
+Using [this book](https://learnyouahaskell.github.io/chapters.html) to learn Haskell.
 
 Bookmark: [7. Modules](https://learnyouahaskell.github.io/modules.html)
 
@@ -62,7 +62,7 @@ Bookmark: [7. Modules](https://learnyouahaskell.github.io/modules.html)
 
 ## 2024.03.05
 
-* Just finished chapter 5
+* Just finished chapter 6
 * Now I'm halfway done with the book!
 * This chapter had a LOT of content, so I will probably reread it
 * Most of the concepts make sense
@@ -71,3 +71,13 @@ Bookmark: [7. Modules](https://learnyouahaskell.github.io/modules.html)
   * I feel like I learned the atomic parts of the language
   * I felt like I had to learn Haskell from the ground up unlike other languages because of how different I have to think when doing functional stuff
 * Many features overlap, but have certain best use cases, so I will need to understand those
+
+---
+
+## 2024.03.07
+
+* Just finished chapter 7
+* Pretty long chapter, most of which is just going over functions from `Data.List` and `Data.Char`
+* I just skimmed over the functions from `Data.Char`, but I think that's okay
+  * I'll just check Hoogle if I need to find something
+* Aside from that, nothing I want to say, it's like making libraries in Python
