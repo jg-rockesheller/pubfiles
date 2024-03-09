@@ -2,7 +2,7 @@
 
 Using [this book](https://learnyouahaskell.github.io/chapters.html) to learn Haskell.
 
-Bookmark: [7. Modules](https://learnyouahaskell.github.io/modules.html)
+Bookmark: [9. Making Our Own Types and Typeclasses: Derived instances](https://learnyouahaskell.github.io/making-our-own-types-and-typeclasses.html#derived-instances)
 
 ---
 
@@ -81,3 +81,12 @@ Bookmark: [7. Modules](https://learnyouahaskell.github.io/modules.html)
 * I just skimmed over the functions from `Data.Char`, but I think that's okay
   * I'll just check Hoogle if I need to find something
 * Aside from that, nothing I want to say, it's like making libraries in Python
+
+---
+
+## 2024.03.08
+
+* Got partway through chapter 8, didn't go further cuz I'm tired
+* I can already tell I will need to reread this chapter to get everything
+* I am a bit confused as to why we shouldn't use typeclass constraints when defining our own types, but I'll figure that out tommorrow
+* I saw an awesome way to define infix functions in this chapter, so that was cool
