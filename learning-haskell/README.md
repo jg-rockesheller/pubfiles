@@ -2,7 +2,7 @@
 
 Using [this book](https://learnyouahaskell.github.io/chapters.html) to learn Haskell.
 
-Bookmark: [9. Making Our Own Types and Typeclasses: Derived instances](https://learnyouahaskell.github.io/making-our-own-types-and-typeclasses.html#derived-instances)
+Bookmark: [9. Input and Output](https://learnyouahaskell.github.io/input-and-output.html)
 
 ---
 
@@ -90,3 +90,16 @@ Bookmark: [9. Making Our Own Types and Typeclasses: Derived instances](https://l
 * I can already tell I will need to reread this chapter to get everything
 * I am a bit confused as to why we shouldn't use typeclass constraints when defining our own types, but I'll figure that out tommorrow
 * I saw an awesome way to define infix functions in this chapter, so that was cool
+
+---
+
+## 2024.03.09
+
+* Finished chapter 8
+* Wow, that was A LOT
+* I for sure did not get the final part of the chapter
+* This seems to be super useful
+* making a type with `data` feels like a `struct` and `enum` from C combined
+* I just realized why the book keeps mentioning actual classes and tyepclasses, as you can kinda define methods for a typeclass
+* I think I'll watch [this playlist](https://www.youtube.com/playlist?list=PLe7Ei6viL6jGp1Rfu0dil1JH1SHk9bgDV) after finishing the book instead of rereading parts, as it will give me a good review
+* The next chapter looks even longer, but more understandable cause its IO
