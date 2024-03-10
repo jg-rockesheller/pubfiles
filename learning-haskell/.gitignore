@@ -1,0 +1,8 @@
+*
+!.gitignore
+
+!code/
+!.envrc
+!.nvim.lua
+!README.md
+!shell.nix
