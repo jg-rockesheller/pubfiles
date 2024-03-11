@@ -1,0 +1,6 @@
+*
+!.gitignore
+
+!chapter-7/
+!chapter-*.hs
+!*.txt

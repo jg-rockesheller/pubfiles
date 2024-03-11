@@ -2,7 +2,7 @@
 
 Using [this book](https://learnyouahaskell.github.io/chapters.html) to learn Haskell.
 
-Bookmark: [9. Input and Output](https://learnyouahaskell.github.io/input-and-output.html)
+Bookmark: [9.4 Input and Output: Randomness](https://learnyouahaskell.github.io/input-and-output.html#randomness)
 
 ---
 
@@ -103,3 +103,11 @@ Bookmark: [9. Input and Output](https://learnyouahaskell.github.io/input-and-out
 * I just realized why the book keeps mentioning actual classes and tyepclasses, as you can kinda define methods for a typeclass
 * I think I'll watch [this playlist](https://www.youtube.com/playlist?list=PLe7Ei6viL6jGp1Rfu0dil1JH1SHk9bgDV) after finishing the book instead of rereading parts, as it will give me a good review
 * The next chapter looks even longer, but more understandable cause its IO
+
+---
+
+## 2024.03.10
+
+* Finished up to chapter 9.4, not going further cuz I'm tired
+* Lots of stuff, I feel like I should stick to the simpler functions for opening files
+* Finally learned how to compile!
