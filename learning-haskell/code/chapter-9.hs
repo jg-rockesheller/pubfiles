@@ -342,4 +342,30 @@
 -- you cannot use `getStdGen` twice, as it will return the same value, instead use `random` to make a new generator or split whatever is returned from `randomRs`
 -- or you can use `newStdGen`, which will just return a new generator wrapped in `IO`
 
--- TODO: number guessing game
+-- number guessing game implementation:
+-- import Control.Monad (when)
+-- import System.Random (getStdGen, newStdGen, StdGen, randomR)
+-- 
+-- main :: IO ()
+-- main = do
+--     gen <- getStdGen
+--     guessingGame gen
+--     return ()
+-- 
+-- guessingGame :: StdGen -> IO ()
+-- guessingGame gen = do
+--     putStr "Guess the number between 1 and 10: "
+--     guess <- getLine
+-- 
+--     let (value, newGen) = randomR (1, 10) gen :: (Int, StdGen)
+--         guessInt = read guess :: Int
+-- 
+--     if guessInt == value
+--         then putStrLn "Correct!"
+--         else do putStrLn ("Incorrect, the corrent number is: " ++ show value)
+-- 
+--     putStr "Play again? [y/n] "
+--     playAgain <- getLine
+--     if playAgain == "y"
+--         then guessingGame newGen
+--         else return ()
