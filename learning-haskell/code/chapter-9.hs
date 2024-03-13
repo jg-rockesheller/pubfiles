@@ -1,4 +1,4 @@
--- main = putStrLn "Hello, world!"
+main = putStrLn "Hello, world!"
 
 -- the type declaration of `putStrLn` is `String -> IO ()`
 -- the `IO ()` means that the function returns an I/O action that has a result type of `()` (an empty tuple)
@@ -369,3 +369,58 @@
 --     if playAgain == "y"
 --         then guessingGame newGen
 --         else return ()
+
+-- strict bytestrings read whole strings of bytes into memory at once (no laziness), they exist in `Data.ByteString`
+-- lazy bytestrings are still lazy, but not as lazy as lists and are stored in `Data.ByteString.Lazy`
+-- store values in chunks of 32 KB, evaluating with promises for the next chunks (like what lists do for promises with the next element)
+-- import qualified Data.ByteString.Lazy as L
+-- import qualified Data.ByteString as S
+-- `pack` takes in a list of bytes (of type `Word8`) and returns a `ByteString`
+-- `Word8` is a number between 0-255 (its a byte / 8 bits)
+-- `unpack` is the inverse of `pack `, taking a `ByteString` and turning it into `Word8` list
+-- `fromChuniks` takes a list of strict bytestrings and converts it to lazy bytestrings
+-- `toChunks` takes a lazy bytestring and converts it to a list of strict ones
+-- use `cons` like `:` on bytestrings
+-- `cons` is for lazy bytestrings and `cons'` is for strict bytestrings
+-- an empty bytestring is represented as `empty`
+-- when using `cons`, what we supply are turned into a new chunk
+-- most functions from `Data.List` work with an are imported with bytestrings
+-- functions dealing with `Strings` from `System.IO` also work with bytestrings
+
+-- copy implementation:
+-- import System.Environment (getArgs)
+-- import qualified Data.ByteString.Lazy as B
+-- main :: IO ()
+-- main = do
+--     (file1:file2:_) <- getArgs
+--     copyFile file1 file2
+-- copyFile :: FilePath -> FilePath -> IO ()
+-- copyFile source destination = do
+--     contents <- B.readFile source
+--     B.writeFile destination contents
+-- the `readFile` and `writeFile` work like they do when coming from `System.IO`, but they use lazy bytestrings rather than actual strings
+
+-- Haskell supports exceptions because they make sense in an I/O context
+-- exceptions can only be caught in I/O code, but can still be thrown in pure code
+-- don't throw exceptions in pure code, but rather rely on `Either` and `Maybe`
+-- import System.Environment (getArgs)
+-- import System.IO (readFile)
+-- import System.IO.Error (catchIOError, isDoesNotExistError, ioError)
+-- main :: IO ()
+-- main = toTry `catchIOError` handler
+-- toTry :: IO ()
+-- toTry = do
+--     (fileName:_) <- getArgs
+--     contents <- readFile fileName
+--     putStrLn ("the file has " ++ show (length (lines contents)) ++ " lines")
+-- handler :: IOError -> IO ()
+-- handler e
+--     | isDoesNotExistError e = putStrLn "the file does not exist"
+--     | otherwise = ioError e
+-- `catchIOError` takes in an I/O action and a handler, either returning what the I/O action would return or what the handler would return depending if there was an exception raised in the I/O action
+-- when an I/O action raises an exception, the handler catches an `IOError`
+-- `isDoesNotExistsError` si one of the functions that checks what the type of an error is and returns a bool on if it is that type of error
+-- `ioError` takes in an `IOError` value and returns an I/O action
+-- we can raise our own exceptions using `userError`, which takes as an argument what the value of the error should be
+-- functions that start with `ioe` to get information from an `IOError`
+-- for example: `ioeGetFileName` takes in an error and returns a `Maybe FilePath`, which will return the name of the file if the error has something to do with a file

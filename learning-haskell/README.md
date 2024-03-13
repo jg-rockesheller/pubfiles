@@ -111,3 +111,12 @@ Bookmark: [9.4 Input and Output: Randomness](https://learnyouahaskell.github.io/
 * Finished up to chapter 9.4, not going further cuz I'm tired
 * Lots of stuff, I feel like I should stick to the simpler functions for opening files
 * Finally learned how to compile!
+
+---
+
+## 2024.03.13
+
+* Finished chapter 9, it was a lot
+* Exceptions make me cry because I like `Maybe` and `Either` way more, but at least I only ever really have to use them when doing I/O
+* Bytestrings will take some getting used to, as most function I have used before work but still some don't, like `lines`, which will make me write a converter between `Chars` and `Word8`
+  * Maybe there are just alternatives I don't know about
