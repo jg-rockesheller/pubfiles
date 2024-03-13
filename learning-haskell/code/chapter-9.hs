@@ -213,75 +213,133 @@
 --        putStrLn "The program name is: "
 --        putStrLn progName
 
-
 -- todo implementation:
-import Data.List as Data.List
-import System.Directory as System.Directory
-import System.Environment as System.Environment
-import System.IO as System.IO
+-- import Data.List as Data.List
+-- import System.Directory as System.Directory
+-- import System.Environment as System.Environment
+-- import System.IO as System.IO
+--
+-- data Command = Add | Remove | View
+--
+-- main = do
+--        (command:args) <- System.Environment.getArgs
+--        let action = dispatch command
+--        action args
+--        return ()
+--
+-- dispatch :: String -> ([String] -> IO ())
+-- dispatch command
+--     | command == "add" = add
+--     | command == "remove" = remove
+--     | command == "view" = view
+--     | otherwise = invalidCommand
+--
+-- add :: [String] -> IO ()
+-- add [] = do
+--          putStrLn "no file specified"
+--          return ()
+-- add (file:[]) = do
+--                 putStrLn "nothing to append"
+--                 return ()
+-- add (file:tasks) = do
+--                    let newLineTasks = map (++ "\n") tasks
+--                    mapM (appendFile file) (newLineTasks)
+--                    return ()
+--
+-- remove :: [String] -> IO ()
+-- remove [] = do
+--             putStrLn "no file specified"
+--             return ()
+-- remove [file] = do
+--                 putStrLn "no indices specified"
+--                 return ()
+-- remove [file, index] = do
+--                        handle <- openFile file ReadMode
+--                        (tempName, tempHandle) <- openTempFile "." "temp"
+--                        contents <- System.IO.hGetContents handle
+--                        let number = read index
+--                            todoTasks = lines contents
+--                            newTodoItems = delete (todoTasks !! number) todoTasks
+--                        System.IO.hPutStr tempHandle $ unlines newTodoItems
+--                        System.IO.hClose handle
+--                        System.IO.hClose tempHandle
+--                        removeFile file
+--                        System.Directory.renameFile tempName file
+--
+-- view :: [String] -> IO ()
+-- view [] = do
+--           putStrLn "no file specified"
+--           return ()
+-- view [file] = do
+--               contents <- readFile file
+--               let tasks = lines contents
+--                   numberedTasks = zipWith (\linum line -> show linum ++ " : " ++ line) [0..] tasks
+--               putStr $ unlines numberedTasks
+--               return ()
+-- view (file:_) = do
+--                 putStrLn "too many arguments for view"
+--                 return ()
+--
+-- invalidCommand :: [String] -> IO ()
+-- invalidCommand _ = do
+--                    putStrLn "invalid command"
+--                    return ()
 
-data Command = Add | Remove | View
+-- the type signature of the `random` function from the `System.Random` module is `random :: (RandomGen g, Random a) => g -> (a, g)`
+-- the `RandomGen` typeclass is for types that can act as sources of randomness
+-- the `Random` typeclass is for things that can take on random values
+-- the `random` function takes in a random generator, then returns a random value and a new random generator
 
-main = do
-       (command:args) <- System.Environment.getArgs
-       let action = dispatch command
-       action args
-       return ()
+-- we can manually create a random generator using `mkStdGen`
+-- import System.Random as System.Random
+-- mkStdGenExample :: Int -> (Int, System.Random.StdGen)
+-- mkStdGenExample n = System.Random.random (System.Random.mkStdGen n)
+-- we can make this return any type
+-- mkStdGenExample2 n = System.Random.random (System.Random.mkStdGen n) :: (Float, StdGen)
+-- mkStdGenExample3 n = System.Random.random (System.Random.mkStdGen n) :: (Bool, StdGen)
+-- mkStdGenExample4 n = System.Random.random (System.Random.mkStdGen n) :: (Integer, StdGen)
 
-dispatch :: String -> ([String] -> IO ())
-dispatch command
-    | command == "add" = add
-    | command == "remove" = remove
-    | command == "view" = view
-    | otherwise = invalidCommand
+-- coin flip implementation:
+-- import System.Random as System.Random
+-- mapTriple :: (a -> b) -> (a, a, a) -> (b, b, b)
+-- mapTriple f (a1, a2, a3) = (f a1, f a2, f a3)
+-- flipCoins :: Int -> (String, String, String)
+-- flipCoins n =
+--   let randGenerator = System.Random.mkStdGen n
+--       (flip1, randGen1) = System.Random.random randGenerator
+--       (flip2, randGen2) = System.Random.random randGen1
+--       (flip3, _) = System.Random.random randGen2
+--       results = mapTriple (\b -> if b == True then "heads" else "tails") (flip1, flip2, flip3)
+--    in results
 
-add :: [String] -> IO ()
-add [] = do
-         putStrLn "no file specified"
-         return ()
-add (file:[]) = do
-                putStrLn "nothing to append"
-                return ()
-add (file:tasks) = do
-                   let newLineTasks = map (++ "\n") tasks
-                   mapM (appendFile file) (newLineTasks)
-                   return ()
+-- we could do this shorter using `randoms`, which returns an infinite list of values based on a generator
+-- import System.Random as System.Random
+-- type Seed = Int
+-- flipCoins :: Int -> Seed -> [String]
+-- flipCoins n s = take n $ map (\b -> if b == True then "heads" else "tails") (randoms (mkStdGen s))
 
-remove :: [String] -> IO ()
-remove [] = do
-            putStrLn "no file specified"
-            return ()
-remove [file] = do
-                putStrLn "no indices specified"
-                return ()
-remove [file, index] = do
-                       handle <- openFile file ReadMode
-                       (tempName, tempHandle) <- openTempFile "." "temp"
-                       contents <- System.IO.hGetContents handle
-                       let number = read index
-                           todoTasks = lines contents
-                           newTodoItems = delete (todoTasks !! number) todoTasks
-                       System.IO.hPutStr tempHandle $ unlines newTodoItems
-                       System.IO.hClose handle
-                       System.IO.hClose tempHandle
-                       removeFile file
-                       System.Directory.renameFile tempName file
+-- notice how in the previous examples we didn't have to specify that we wanted `random` to return a bool because later we use its results like a bool, so Haskell can infer what we want it to become
 
-view :: [String] -> IO ()
-view [] = do
-          putStrLn "no file specified"
-          return ()
-view [file] = do
-              contents <- readFile file
-              let tasks = lines contents
-                  numberedTasks = zipWith (\linum line -> show linum ++ " : " ++ line) [0..] tasks
-              putStr $ unlines numberedTasks
-              return ()
-view (file:_) = do
-                putStrLn "too many arguments for view"
-                return ()
+-- `randoms` implementation:
+-- import System.Random as System.Random
+-- randoms' :: (System.Random.RandomGen g, System.Random.Random a) => g -> [a]
+-- randoms' gen = let (value, newGen) = System.Random.random gen in value:randoms' newGen
 
-invalidCommand :: [String] -> IO ()
-invalidCommand _ = do
-                   putStrLn "invalid command"
-                   return ()
+-- we can use `randomR` to get a random value in a range
+-- import System.Random as System.Random
+-- randomRExample min max seed = System.Random.randomR (min, max) (System.Random.mkStdGen seed) :: (Int, StdGen)
+
+-- we can use `randomRs` to produce an infinite stream of random values within a range
+-- import System.Random as System.Random
+-- randomRsExample min max seed length = take length $ System.Random.randomRs (min, max) (System.Random.mkStdGen seed) :: String
+
+-- `getStdGen` is an I/O action that returns a value of type `IO StdGen` it asks the system for a good random number generator and stores that in a global generator
+-- import System.Random as System.Random
+-- main = do
+--   gen <- System.Random.getStdGen
+--   putStrLn $ take 20 (System.Random.randomRs ('a', 'z') gen)
+
+-- you cannot use `getStdGen` twice, as it will return the same value, instead use `random` to make a new generator or split whatever is returned from `randomRs`
+-- or you can use `newStdGen`, which will just return a new generator wrapped in `IO`
+
+-- TODO: number guessing game

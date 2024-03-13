@@ -1,6 +1,6 @@
 -- explicit type declarations
 removeNonUppercase :: [Char] -> [Char] -- I think this means it takes in a list of chars and returns a list of chars
-removeNonUppercase xs = [ x | x <- xs, x `elem` ['A' .. 'Z'] ]
+removeNonUppercase xs = [x | x <- xs, x `elem` ['A' .. 'Z']]
 
 -- the type of the last item will alsways be the return type
 addThree :: Int -> Int -> Int -> Int
@@ -11,6 +11,7 @@ addThree x y z = x + y + z -- this only returns one Int
 -- `Float` vs `Double`
 circumference :: Float -> Float
 circumference r = 2 * pi * r
+
 circumference' :: Double -> Double -- doubles contain double the precision as floats
 circumference' r = 2 * pi * r
 
@@ -19,6 +20,7 @@ circumference' r = 2 * pi * r
 -- type variables
 head' :: [a] -> a -- `a` means that is can represent any variable type
 head' xs = xs !! 0
+
 -- kinda like generics
 -- functions that have type variables are called polymorphic functions
 -- do not start with uppercase letters
@@ -33,21 +35,26 @@ head' xs = xs !! 0
 -- `Eq` used for types that support testing equality
 -- `Ord` used for types that can be ordered
 -- `Enum` means that types that are members of this class are sequentually ordered, such as `Ints` (1, 2, 3, 4,...)
-   -- think of things like `succ`
+-- think of things like `succ`
 
 -- `Show` can be represented as a string (Int -> String)
 showThree :: [Char]
 showThree = show 3
+
 -- `Read` opposite of `Show` (String -> Int)
 readThree :: Int
 readThree = read "3" -- `read` works in this case because we use the explicit type declaration above to say we want an `Int` out of the string
 -- we could have the same effect by doing:
+
 readFour = read "4" :: Int
+
 -- type annotations can be used to fix confusions around `Int` and `Float`
 
 -- `Bounded` members have an upper and lower bound
 minInt = minBound :: Int -- while `Int` is bounded, `Integer` is not
+
 maxInt = maxBound :: Int
+
 -- tuples become members of `Bounded` if their components are a part of the class
 maxTupleExample = maxBound :: (Bool, Int, Char)
 
@@ -55,4 +62,5 @@ maxTupleExample = maxBound :: (Bool, Int, Char)
 -- `Integral` is like `Num` but its memebers can only be whole numbers
 -- `Floating` is like `Num` but its memebers can only be floating point numbers
 intToNum = fromIntegral 5 -- this turns the `Int` 5 into a `Num` 5
-workWithLength = fromIntegral (length [1,2,3,4]) + 3.2 -- we do this because length returns an `Int`
+
+workWithLength = fromIntegral (length [1, 2, 3, 4]) + 3.2 -- we do this because length returns an `Int`
