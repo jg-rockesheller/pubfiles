@@ -2,7 +2,7 @@
 
 Using [this book](https://learnyouahaskell.github.io/chapters.html) to learn Haskell.
 
-Bookmark: [9.4 Input and Output: Randomness](https://learnyouahaskell.github.io/input-and-output.html#randomness)
+Bookmark: [10.2 Functionally Solving Problems: Heathrow to London] (https://learnyouahaskell.github.io/functionally-solving-problems.html#heathrow-to-london)
 
 ---
 
@@ -116,7 +116,17 @@ Bookmark: [9.4 Input and Output: Randomness](https://learnyouahaskell.github.io/
 
 ## 2024.03.13
 
+### Chapter 9
+
 * Finished chapter 9, it was a lot
 * Exceptions make me cry because I like `Maybe` and `Either` way more, but at least I only ever really have to use them when doing I/O
 * Bytestrings will take some getting used to, as most function I have used before work but still some don't, like `lines`, which will make me write a converter between `Chars` and `Word8`
   * Maybe there are just alternatives I don't know about
+
+### Chapter 10
+
+* Finished up to halfway of chapter 10.2.
+* Very new way of thinking
+* I find it very difficult to think up ways to solve problems functionally, but I think this will come with more practice
+  * I try and think up a solution, but then the book shows me an even better way!
+* I feel like I need a piece of paper and a diagram showing my steps whenever I am going to solve problems like this, maybe I'll start including those
