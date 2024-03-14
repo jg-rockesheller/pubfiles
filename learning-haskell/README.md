@@ -2,8 +2,7 @@
 
 Using [this book](https://learnyouahaskell.github.io/chapters.html) to learn Haskell.
 
-Bookmark: [10.2 Functionally Solving Problems: Heathrow to London] (https://learnyouahaskell.github.io/functionally-solving-problems.html#heathrow-to-london)
-
+Bookmark: [11.2 Functors, Applicative Functions, and Monoids: Applicative Functors](https://learnyouahaskell.github.io/functors-applicative-functors-and-monoids.html#applicative-functors)
 ---
 
 ## 2024.03.01 Notes
@@ -130,3 +129,17 @@ Bookmark: [10.2 Functionally Solving Problems: Heathrow to London] (https://lear
 * I find it very difficult to think up ways to solve problems functionally, but I think this will come with more practice
   * I try and think up a solution, but then the book shows me an even better way!
 * I feel like I need a piece of paper and a diagram showing my steps whenever I am going to solve problems like this, maybe I'll start including those
+
+---
+
+## 2024.03.14
+
+### Chapter 10
+
+* Finished chapter 10
+* The I/O part makes sense to me
+* I reread the solution and it makes more sense
+
+### Chapter 11
+
+* asdf
