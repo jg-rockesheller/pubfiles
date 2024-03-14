@@ -49,3 +49,21 @@ roadStep (pathA, pathB) (Section a b c) =
                         then (B, b):pathB
                         else (C, c):(B, b):pathA
         in (newPathToA, newPathToB)
+
+-- grouping function
+groupsOf :: Int -> [a] -> [[a]]
+groupsOf _ [] = []
+groupsOf 0 _ = undefined
+groupsOf n xs = take n xs : groupsOf n (drop n xs)
+
+-- print out best path as a string
+main :: IO ()
+main = do
+    contents <- getContents
+    let threes = groupsOf 3 (map read $ lines contents) -- convert the contents to the format of a road system
+        roadSystem = map (\[a, b, c] -> Section a b c) threes
+        path = optimalPath roadSystem -- get the optimal path to the end of the road
+        pathString = concatMap (show . fst) path -- represent the path as a string`
+        pathLength = show  . sum $ map snd path -- get the total length of the map
+    putStrLn $ "The best path is: " ++ pathString
+    putStrLn $ "The length of this path is: " ++ pathLength
