@@ -2,7 +2,8 @@
 
 Using [this book](https://learnyouahaskell.github.io/chapters.html) to learn Haskell.
 
-Bookmark: [11.2 Functors, Applicative Functions, and Monoids: Applicative Functors](https://learnyouahaskell.github.io/functors-applicative-functors-and-monoids.html#applicative-functors)
+Bookmark: [11.4 Functors, Applicative Functions, and Monoids: Monoids](https://learnyouahaskell.github.io/functors-applicative-functors-and-monoids.html#monoids)
+
 ---
 
 ## 2024.03.01 Notes
@@ -134,12 +135,10 @@ Bookmark: [11.2 Functors, Applicative Functions, and Monoids: Applicative Functo
 
 ## 2024.03.14
 
-### Chapter 10
-
 * Finished chapter 10
 * The I/O part makes sense to me
 * I reread the solution and it makes more sense
 
-### Chapter 11
+---
 
-* asdf
+## 2024.03.15
