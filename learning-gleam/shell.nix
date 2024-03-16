@@ -1,2 +1,4 @@
 { pkgs ? import <nixpkgs> {}}:
-pkgs.mkShell { packages = with pkgs; [ gleam ]; }
+pkgs.mkShell {
+  packages = with pkgs; [ gleam erlang ];
+}
