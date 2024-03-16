@@ -1,3 +1,13 @@
+# `**DROPPED**`
+
+This was a pretty good start for getting into functional programming, but I want to use a simpler language like [Gleam](https://gleam.run/).
+
+Although I enjoyed Haskell for introducing me to functional concepts, I am switching to learning Gleam because it is:
+* simple (usually only one way to do things, unlike in Haskell, where there is a bunch of different ways to create your own data type, class, etc.)
+* has great tooling
+
+---
+
 # Learning Haskell
 
 Using [this book](https://learnyouahaskell.github.io/chapters.html) to learn Haskell.
