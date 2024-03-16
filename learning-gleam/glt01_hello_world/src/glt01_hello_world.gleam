@@ -5,7 +5,8 @@ import gleam/io
 // `io` is the module from the standard library being imported
 
 pub fn main() {
-  io.println("Hello, world!") // no semicolons!
+  // no semicolons!
+  io.println("Hello, world!")
   // because there's a `println`, there should be a `print`
   io.print("Hello, Mike!\n")
 }
