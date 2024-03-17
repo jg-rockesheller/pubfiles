@@ -2,7 +2,10 @@
 
 A run-through of the [Tour of Gleam](https://tour.gleam.run) and the [Exercism course](https://exercism.org/tracks/gleam).
 
-Bookmark: [Tour: Advanced Features: Use (First Pass)](https://tour.gleam.run/advanced-features/use/
+Bookmark: [Exercism: Hello, World!](https://exercism.org/tracks/gleam/exercises/hello-world) (First Pass)
+
+Completed:
+1. [Tour](https://tour.gleam.run/) (First Pass)
 
 ## 2024.03.16
 
