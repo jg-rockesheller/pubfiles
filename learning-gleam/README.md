@@ -1,10 +1,12 @@
 # Learning Gleam
 
-A run-through of the [Tour of Gleam](https://tour.gleam.run).
+A run-through of the [Tour of Gleam](https://tour.gleam.run) and the [Exercism course](https://exercism.org/tracks/gleam).
 
-Bookmark: [Data Type: Tuples](https://tour.gleam.run/data-types/tuples/)
+Bookmark: [Tour: Standard Library: Standard library package (First Pass)](https://tour.gleam.run/standard-library/standard-library-package/)
 
 ## 2024.03.16
+
+The first pass of the tour.
 
 ### Basics
 
@@ -28,3 +30,9 @@ Bookmark: [Data Type: Tuples](https://tour.gleam.run/data-types/tuples/)
   * Unlike Haskell, which has pattern matching both in just function defintions and in where expressions, as well as guards
     * In Gleam, this all falls under case expressions
 * I think I understand the difference between
+
+### Data Types
+
+* I thought this was way easier to reason about compared to Haskell's type system
+  * Might just because the book explained it too strangely
+* Comparing variants to enums and records to structs makes alot of sense
