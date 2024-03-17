@@ -36,3 +36,4 @@ The first pass of the tour.
 * I thought this was way easier to reason about compared to Haskell's type system
   * Might just because the book explained it too strangely
 * Comparing variants to enums and records to structs makes alot of sense
+* I think `Results` are the best things in the world for error handling
