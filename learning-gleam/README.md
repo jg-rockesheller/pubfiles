@@ -2,7 +2,7 @@
 
 A run-through of the [Tour of Gleam](https://tour.gleam.run) and the [Exercism course](https://exercism.org/tracks/gleam).
 
-Bookmark: [Tour: Standard Library: Standard library package (First Pass)](https://tour.gleam.run/standard-library/standard-library-package/)
+Bookmark: [Tour: Advanced Features: Use (First Pass)](https://tour.gleam.run/advanced-features/use/)
 
 ## 2024.03.16
 
@@ -37,3 +37,8 @@ The first pass of the tour.
   * Might just because the book explained it too strangely
 * Comparing variants to enums and records to structs makes alot of sense
 * I think `Results` are the best things in the world for error handling
+
+### Standard Library
+
+* Mostly quality of life things
+* If I need anything, at least there are good docs
