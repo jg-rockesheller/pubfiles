@@ -2,11 +2,13 @@
 
 A run-through of the [Tour of Gleam](https://tour.gleam.run) and the [Exercism course](https://exercism.org/tracks/gleam).
 
-Bookmark: [Tour: Advanced Features: Use (First Pass)](https://tour.gleam.run/advanced-features/use/)
+Bookmark: [Tour: Advanced Features: Use (First Pass)](https://tour.gleam.run/advanced-features/use/
 
 ## 2024.03.16
 
 The first pass of the tour.
+
+Overall, I really enjoy the simplicity of the language. It takes what I like from C and Haskell, simplicity and functional programming. I definitely need more practice though.
 
 ### Basics
 
@@ -42,3 +44,9 @@ The first pass of the tour.
 
 * Mostly quality of life things
 * If I need anything, at least there are good docs
+
+### Advanced Features
+
+* `Use` seems super useful
+* I will definitely try to avoid panics and let asserts
+* I wonder if I can use C for externals
