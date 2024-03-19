@@ -2,7 +2,7 @@
 
 A run-through of the [Tour of Gleam](https://tour.gleam.run) and the [Exercism course](https://exercism.org/tracks/gleam).
 
-Bookmark: [Exercism: Hello, World!](https://exercism.org/tracks/gleam/exercises/hello-world) (First Pass)
+Bookmark: Exercism Course (First Pass - 5.6%)
 
 Completed:
 1. [Tour](https://tour.gleam.run/) (First Pass)
@@ -53,3 +53,12 @@ Overall, I really enjoy the simplicity of the language. It takes what I like fro
 * `Use` seems super useful
 * I will definitely try to avoid panics and let asserts
 * I wonder if I can use C for externals
+
+---
+
+## 2024.03.17
+
+* I think I just have to think about how to solve a problem rather than worrying about whether the course has covered it yet.
+* I really, really love the language, it just feels too young or has too much abstraction to use for writing some things.
+  * Mainly I can't figure out how to read from a file.
+* I will continue with it, but I will put it on the backburner as I learn C++.
