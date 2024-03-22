@@ -61,4 +61,4 @@ Overall, I really enjoy the simplicity of the language. It takes what I like fro
 * I think I just have to think about how to solve a problem rather than worrying about whether the course has covered it yet.
 * I really, really love the language, it just feels too young or has too much abstraction to use for writing some things.
   * Mainly I can't figure out how to read from a file.
-* I will continue with it, but I will put it on the backburner as I learn C++.
+* I will continue with it, but I will put it on the backburner as I learn other stuff.
