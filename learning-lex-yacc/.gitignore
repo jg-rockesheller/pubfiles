@@ -7,3 +7,6 @@
 !myscanner.l
 !myscanner.h
 !myscanner.c
+
+!calc.y
+!calc.l
