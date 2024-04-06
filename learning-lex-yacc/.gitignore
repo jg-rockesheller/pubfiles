@@ -1,0 +1,9 @@
+*
+!.gitignore
+
+!ex1.l
+
+!config.in
+!myscanner.l
+!myscanner.h
+!myscanner.c
